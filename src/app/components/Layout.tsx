@@ -103,8 +103,8 @@ export default function Layout() {
                 Good food, better drinks, best people. The only place you need to be when the sun goes down.
               </p>
               <div className="mb-6 space-y-1">
-                <p className="text-white/70 text-[13px]">+91 98765 43210</p>
-                <p className="text-white/70 text-[13px]">Kezia Tower, 7th Floor, Kalyan West, Maharashtra 421301</p>
+                <p className="text-white/38 text-[13px]">+91 98765 43210</p>
+                <p className="text-white/38 text-[13px]">Kezia Tower, 7th Floor, Kalyan West, Maharashtra 421301</p>
               </div>
               <div className="flex gap-3">
                 {[
