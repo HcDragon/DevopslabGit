@@ -70,12 +70,12 @@ export default function Experience() {
                       </li>
                     ))}
                   </ul>
-                  <Link to="/reservations"
+                  <Link to="/contact"
                     className="inline-flex px-8 py-4 border text-[9.5px] tracking-[0.28em] uppercase transition-all duration-300"
                     style={{ borderColor: `${gold}42`, color: gold }}
                     onMouseEnter={e => { e.currentTarget.style.backgroundColor = gold; e.currentTarget.style.color = "#000"; }}
                     onMouseLeave={e => { e.currentTarget.style.backgroundColor = "transparent"; e.currentTarget.style.color = gold; }}>
-                    Book This Experience
+                    Contact Us
                   </Link>
                 </div>
                 <div className={`relative ${i % 2 === 1 ? "lg:col-start-1 lg:row-start-1" : ""}`}>

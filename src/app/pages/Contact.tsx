@@ -31,18 +31,15 @@ export default function Contact() {
               <p className="text-[9.5px] tracking-[0.52em] uppercase mb-5" style={{ color: gold }}>Get in Touch</p>
               <h2 className="font-['Playfair_Display',serif] text-[2.5rem] md:text-[3rem] font-bold leading-[1.05] mb-7">We'd Love to<br />Hear From You</h2>
               <p className="text-white/42 text-[14px] leading-[1.8] mb-12">
-                Whether you have a reservation enquiry, a special request, a media opportunity, or simply wish to learn more about Kezia — our team responds to every message with the same care we bring to the dining room.
+                Whether you have a general enquiry, a special request, a media opportunity, or simply wish to learn more about Kezia — our team responds to every message with the same care we bring to the dining room.
               </p>
             </FadeUp>
 
             <FadeUp delay={0.1} className="space-y-4 mb-12">
               {[
-                [Phone,   "Reservations & General",   "+91 98765 43210"],
-                [Phone,   "Events & Private Dining",  "+91 98765 43211"],
-                [Mail,    "Reservations",              "reservations@keziarooftop.in"],
-                [Mail,    "Events",                   "events@keziarooftop.in"],
-                [Mail,    "Press & Media",             "press@keziarooftop.in"],
-                [MapPin,  "Address",                   "Kezia Tower, 7th Floor, Kalyan West, Maharashtra 421301"],
+                [Phone,   "Phone",   "+91 98765 43210"],
+                [Mail,    "Email",   "reservations@keziarooftop.in"],
+                [MapPin,  "Address", "Kezia Tower, 7th Floor, Kalyan West, Maharashtra 421301"],
                 [Clock,   "Dining Hours",              "Monday – Sunday · 7:00 PM – 1:00 AM"],
                 [Clock,   "Office Hours",              "Monday – Saturday · 2:00 PM – 10:00 PM"],
               ].map(([Icon, label, value]) => (
@@ -119,7 +116,7 @@ export default function Contact() {
                     <select value={form.subject} onChange={f("subject")}
                       className={inputBase + " bg-[#181818] appearance-none"}>
                       <option value="" className="bg-[#181818]">Select a topic</option>
-                      {["Reservation Enquiry","Private Event","Press & Media","Feedback","Corporate Partnership","Career Opportunities","Other"].map(s => (
+                      {["General Enquiry","Private Event","Press & Media","Feedback","Corporate Partnership","Career Opportunities","Other"].map(s => (
                         <option key={s} className="bg-[#181818]">{s}</option>
                       ))}
                     </select>
@@ -157,7 +154,7 @@ export default function Contact() {
               </div>
               <p className="font-['Playfair_Display',serif] text-2xl font-bold mb-3">Kezia Rooftop Fine Dine</p>
               <p className="text-white/46 text-[14px] mb-6">Kezia Tower, 7th Floor · Kalyan West, Maharashtra 421301</p>
-              <a href="https://maps.google.com/?q=Kalyan+West+Maharashtra" target="_blank" rel="noopener noreferrer"
+              <a href="https://maps.app.goo.gl/5yxLFquvqkaPYmhL7" target="_blank" rel="noopener noreferrer"
                 className="px-8 py-3.5 border text-[9.5px] tracking-[0.3em] uppercase transition-all duration-300"
                 style={{ borderColor: `${gold}40`, color: gold }}
                 onMouseEnter={e => { e.currentTarget.style.backgroundColor = gold; e.currentTarget.style.color = "#000"; }}
@@ -182,7 +179,7 @@ export default function Contact() {
               { q: "Is the rooftop open during the monsoon?", a: "Yes. Our enclosed glass terrace section remains open year-round. The open terrace section is weather-dependent." },
               { q: "Do you cater to vegan and Jain diets?", a: "Absolutely. Our kitchen accommodates vegan, Jain, gluten-free, and most allergen-specific requirements with advance notice." },
               { q: "Can I bring my own cake?", a: "Yes, with a plating fee of ₹500. Alternatively, our pastry team can create a fully bespoke cake for your occasion." },
-              { q: "What is your minimum spend?", a: "There is no minimum spend for standard table reservations. Private events and the Chef's Table have package pricing." },
+              { q: "What is your minimum spend?", a: "There is no minimum spend for standard tables. Private events and the Chef's Table have package pricing." },
               { q: "Is parking available?", a: "Yes. Complimentary valet parking at the ground floor entrance. Multi-level covered parking is also adjacent to Kezia Tower." },
             ].map(({ q, a }) => (
               <FadeUp key={q}>

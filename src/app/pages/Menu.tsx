@@ -119,14 +119,14 @@ export default function Menu() {
         {/* Dietary & Allergen note */}
         <div className="border border-white/6 p-6 flex flex-col md:flex-row gap-4 md:items-center justify-between">
           <p className="text-white/35 text-[12px] leading-relaxed max-w-[540px]">
-            All dishes can be adapted for dietary requirements including vegan, gluten-free, and Jain. Please inform your server of any allergies or preferences when making your reservation.
+            All dishes can be adapted for dietary requirements including vegan, gluten-free, and Jain. Please inform your server of any allergies or preferences when visiting.
           </p>
-          <Link to="/reservations"
+          <Link to="/contact"
             className="flex-shrink-0 px-8 py-3.5 text-black text-[9px] tracking-[0.28em] uppercase font-semibold transition-colors"
             style={{ backgroundColor: gold }}
             onMouseEnter={e => (e.currentTarget.style.backgroundColor = goldHover)}
             onMouseLeave={e => (e.currentTarget.style.backgroundColor = gold)}>
-            Book & Order
+            Contact Us
           </Link>
         </div>
       </section>

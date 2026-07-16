@@ -49,7 +49,7 @@ export default function Locations() {
                   />
                   <div className="absolute inset-0 flex items-center justify-center">
                     <a 
-                      href="https://maps.app.goo.gl/cjiidc41MVMPwwD4A" 
+                      href="https://maps.app.goo.gl/5yxLFquvqkaPYmhL7" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="px-8 py-4 text-black text-[9.5px] tracking-[0.28em] uppercase font-semibold transition-colors shadow-[0_0_20px_rgba(212,175,55,0.15)]"
@@ -69,8 +69,8 @@ export default function Locations() {
                   <p className="font-serif text-lg text-white/90">7 PM - 1 AM</p>
                 </div>
                 <div className="border border-white/10 p-5 text-center transition-colors hover:border-[#D4AF37]/50 group">
-                  <p className="text-[9px] tracking-[0.2em] uppercase text-white/40 mb-2 group-hover:text-[#D4AF37] transition-colors">Reservations</p>
-                  <p className="font-serif text-lg text-white/90">+91 98765 43210</p>
+                  <p className="text-[9px] tracking-[0.2em] uppercase text-white/40 mb-2 group-hover:text-[#D4AF37] transition-colors">Contact</p>
+                  <p className="text-lg text-white/90">+91 98765 43210</p>
                 </div>
               </div>
             </div>

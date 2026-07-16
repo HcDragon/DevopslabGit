@@ -165,10 +165,6 @@ export default function Events() {
                     onMouseLeave={e => (e.currentTarget.style.backgroundColor = gold)}>
                     Enquire Now
                   </Link>
-                  <Link to="/reservations"
-                    className="px-8 py-4 border border-white/26 text-white/70 text-[9.5px] tracking-[0.28em] uppercase hover:border-[#D4AF37]/45 hover:text-[#D4AF37] transition-all duration-300">
-                    Reserve a Table
-                  </Link>
                 </div>
               </div>
             </div>

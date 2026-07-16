@@ -43,7 +43,7 @@ export default function Layout() {
           {/* Logo */}
           <Link to="/" className="flex flex-col leading-none">
             <span className="font-['Playfair_Display',serif] text-[21px] font-bold tracking-[0.22em]" style={{ color: gold }}>KEZIA</span>
-            <span className="text-[7.5px] tracking-[0.55em] uppercase text-white/32">Rooftop Fine Dine</span>
+            <span className="text-[7.5px] tracking-[0.55em] uppercase text-white/42">Rooftop Fine Dine</span>
           </Link>
 
           {/* Desktop nav */}
@@ -58,11 +58,11 @@ export default function Layout() {
             ))}
           </div>
 
-          <Link to="/locations"
+          <a href="https://maps.app.goo.gl/5yxLFquvqkaPYmhL7" target="_blank" rel="noopener noreferrer"
             className="hidden lg:inline-flex px-6 py-2.5 border border-[#D4AF37]/42 text-[9.5px] tracking-[0.22em] uppercase transition-all duration-300 hover:bg-[#D4AF37] hover:text-black"
             style={{ color: gold }}>
             Find Us
-          </Link>
+          </a>
 
           <button className="lg:hidden text-white/60 hover:text-white transition-colors" onClick={() => setOpen(o => !o)}>
             {open ? <X size={22} /> : <Menu size={22} />}
@@ -80,9 +80,9 @@ export default function Layout() {
                 {label}
               </NavLink>
             ))}
-            <Link to="/locations" className="mt-2 px-6 py-3.5 border border-[#D4AF37]/40 text-[10px] tracking-[0.25em] uppercase text-center" style={{ color: gold }}>
+            <a href="https://maps.app.goo.gl/5yxLFquvqkaPYmhL7" target="_blank" rel="noopener noreferrer" className="mt-2 px-6 py-3.5 border border-[#D4AF37]/40 text-[10px] tracking-[0.25em] uppercase text-center" style={{ color: gold }}>
               Find Us
-            </Link>
+            </a>
           </div>
         )}
       </nav>
@@ -99,9 +99,13 @@ export default function Layout() {
             <div className="lg:col-span-2">
               <p className="font-['Playfair_Display',serif] text-[1.9rem] font-bold mb-1" style={{ color: gold }}>KEZIA</p>
               <p className="text-[7.5px] tracking-[0.55em] uppercase text-white/28 mb-6">Kalyan's Premium Rooftop</p>
-              <p className="text-white/38 text-[13px] leading-[1.8] mb-8 max-w-[340px]">
+              <p className="text-white/38 text-[13px] leading-[1.8] mb-6 max-w-[340px]">
                 Good food, better drinks, best people. The only place you need to be when the sun goes down.
               </p>
+              <div className="mb-6 space-y-1">
+                <p className="text-white/70 text-[13px]">+91 98765 43210</p>
+                <p className="text-white/70 text-[13px]">Kezia Tower, 7th Floor, Kalyan West, Maharashtra 421301</p>
+              </div>
               <div className="flex gap-3">
                 {[
                   [Instagram, "Instagram", "https://instagram.com"],
@@ -148,7 +152,7 @@ export default function Layout() {
             </div>
           </div>
           <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-white/20 text-[11px] tracking-wider">© 2025 Kezia Rooftop. All rights reserved.</p>
+            <p className="text-white/20 text-[11px] tracking-wider">© 2025 Kezia Rooftop.</p>
             <p className="text-white/16 text-[11px]">Made with good vibes in Kalyan, Maharashtra</p>
           </div>
         </div>

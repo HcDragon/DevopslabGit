@@ -141,12 +141,12 @@ export default function About() {
           <p className="text-white/42 text-[15px] mb-10 max-w-[400px] mx-auto leading-relaxed">
             Every evening at Kezia is a new chapter. Come write yours above the city.
           </p>
-          <Link to="/reservations"
+          <Link to="/contact"
             className="inline-flex px-12 py-5 text-black text-[9.5px] tracking-[0.32em] uppercase font-semibold transition-colors"
             style={{ backgroundColor: gold }}
             onMouseEnter={e => (e.currentTarget.style.backgroundColor = goldHover)}
             onMouseLeave={e => (e.currentTarget.style.backgroundColor = gold)}>
-            Reserve Your Table
+            Contact Us
           </Link>
         </FadeUp>
       </section>
