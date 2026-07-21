@@ -49,10 +49,16 @@ export default function About() {
             </p>
           </FadeUp>
           <FadeUp delay={0.2}>
-            <div className="grid grid-cols-2 gap-4">
-              <img src={IMGS.interior} alt="Kezia dining room" className="w-full h-72 object-cover bg-[#181818] col-span-2" />
-              <img src={IMGS.food1} alt="Signature dish" className="w-full h-48 object-cover bg-[#181818]" />
-              <img src={IMGS.chef} alt="Chef Aarav in kitchen" className="w-full h-48 object-cover bg-[#181818]" />
+            <div className="grid grid-cols-2 gap-4 items-stretch">
+              <div className="col-span-2 aspect-[16/10] w-full overflow-hidden rounded-sm border border-white/10 shadow-2xl bg-[#181818]">
+                <img src={IMGS.ambientEntrance} alt="Kezia Ambient Bliss Entrance Foyer" className="w-full h-full object-cover object-center" />
+              </div>
+              <div className="aspect-[4/5] w-full overflow-hidden rounded-sm border border-white/10 shadow-xl bg-[#181818]">
+                <img src={IMGS.rooftopGlow} alt="Kezia Nights Glow Rooftop Terrace" className="w-full h-full object-cover object-center" />
+              </div>
+              <div className="aspect-[4/5] w-full overflow-hidden rounded-sm border border-white/10 shadow-xl bg-[#181818]">
+                <img src={IMGS.cocktailWings} alt="Kezia Signature Wings & Red Cocktail" className="w-full h-full object-cover object-center" />
+              </div>
             </div>
           </FadeUp>
         </div>

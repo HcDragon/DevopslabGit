@@ -5,7 +5,7 @@ import About from "./pages/About";
 import Menu from "./pages/Menu";
 import Events from "./pages/Events";
 import Locations from "./pages/Locations";
-import Workspace from "./pages/Workspace";
+import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
@@ -29,7 +29,7 @@ export const router = createBrowserRouter([
       { index: true, Component: Home },
       { path: "locations", Component: Locations },
       { path: "menu", Component: Menu },
-      { path: "workspace", Component: Workspace },
+      { path: "gallery", Component: Gallery },
       { path: "events", Component: Events },
       { path: "about", Component: About },
       { path: "contact", Component: Contact },

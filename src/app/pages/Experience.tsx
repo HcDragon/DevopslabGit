@@ -7,31 +7,31 @@ import { IMGS, gold, goldHover, glass, glassBorder } from "../design";
 const EXPERIENCES = [
   {
     icon: Eye,
-    title: "360° Skyline View",
-    desc: "Our terrace commands an unobstructed panoramic view of Kalyan and the Greater Mumbai Metropolitan Region. By day, you see the city's ambition stretching to the horizon. By night, a constellation of lights mirrors the sky above.",
-    details: ["Open terrace seating for 80 guests","Glass-walled enclosed section for 40","Heated infrared terrace for winter evenings","Sunrise & sunset private bookings available"],
-    img: IMGS.city,
+    title: "Nights Glow Rooftop Terrace",
+    desc: "Our open-air rooftop terrace features custom warm lighting, luxurious leather seating, and lotus petal light sculptures. Experience Kalyan's night sky in total comfort while enjoying ambient music and panoramic city views.",
+    details: ["Open terrace seating for 80 guests","Custom lotus lamps and plush leather armchairs","Heated infrared terrace for cool evenings","Golden dusk & night sky private bookings available"],
+    img: IMGS.rooftopGlow,
   },
   {
     icon: Utensils,
-    title: "Fine Dining",
-    desc: "Every dish served at Kezia is the result of days, sometimes weeks, of refinement. Chef Aarav Krishnan's kitchen operates with the precision of a fine watchmaker — obsessing over provenance, technique, and the micro-details that separate good from unforgettable.",
-    details: ["7-course tasting menu available nightly","Seasonal menu updated every 8 weeks","Farm-to-table sourcing from Maharashtra","Allergen-aware kitchen with bespoke menus"],
-    img: IMGS.food1,
+    title: "Gourmet Fine Dining & Sushi",
+    desc: "Every dish served at Kezia is a work of art. From artisan sushi rolls topped with edible orchid blooms to delicately painted sauces, our kitchen combines culinary precision with vibrant visual presentation.",
+    details: ["Signature sushi & microgreen pairings","Sauce-painted artisan platter presentations","Locally sourced herbs & fresh seafood daily","Custom chef tasting & pairing menus"],
+    img: IMGS.sushiGourmet,
   },
   {
-    icon: Music,
-    title: "Live Music",
-    desc: "Music at Kezia is never background noise — it is a curated complement to the dining experience. Our resident artists perform every Thursday through Sunday, from atmospheric jazz quartets to contemporary acoustic sets.",
-    details: ["Live performances Thu–Sun from 8PM","Resident jazz quartet twice monthly","Occasional visiting international artists","Custom playlist programming for private events"],
-    img: IMGS.interior,
+    icon: Sparkles,
+    title: "Ambient Foyer & Arrival",
+    desc: "From the moment you step through our rustic brick archway and enter the illuminated KEZIA foyer, the bustle of the city falls away. Textured walls, warm lighting, and organic wood craftsmanship set an inviting, luxurious mood.",
+    details: ["Backlit KEZIA sun emblem foyer","Artisan driftwood console & floral arrangements","Dedicated host welcoming every guest","Seamless elevator access to rooftop terrace"],
+    img: IMGS.ambientEntrance,
   },
   {
-    icon: Award,
-    title: "Chef's Table",
-    desc: "The most intimate experience at Kezia — a table for up to 8 guests positioned within view of the open kitchen. Chef Aarav presents each course personally, explaining the provenance of every ingredient and the thinking behind every technique.",
-    details: ["Maximum 8 guests per seating","Minimum 3-day advance booking required","Fully customizable tasting experience","Wine pairing consultation included"],
-    img: IMGS.chef,
+    icon: Wine,
+    title: "Signature Cocktails & Satay",
+    desc: "Our bar program features handcrafted cocktails infused with hibiscus and fresh berries alongside flame-grilled satay skewers served over banana leaf with decorative coulis artwork.",
+    details: ["Rooftop hibiscus gin & berry infusions","Flame-grilled satay with lotus sauce art","Fresh squeezed citrus coolers & mocktails","Award-winning mixology team"],
+    img: IMGS.cocktailWings,
   },
 ];
 
@@ -78,9 +78,9 @@ export default function Experience() {
                     Contact Us
                   </Link>
                 </div>
-                <div className={`relative ${i % 2 === 1 ? "lg:col-start-1 lg:row-start-1" : ""}`}>
-                  <img src={exp.img} alt={exp.title} className="w-full h-[480px] object-cover bg-[#181818]" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0D0D0D]/20 to-transparent" />
+                <div className={`relative aspect-[4/5] max-h-[500px] w-full mx-auto overflow-hidden rounded-sm border border-white/10 shadow-2xl bg-[#181818] ${i % 2 === 1 ? "lg:col-start-1 lg:row-start-1" : ""}`}>
+                  <img src={exp.img} alt={exp.title} className="w-full h-full object-cover object-center" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0D0D0D]/30 via-transparent to-transparent" />
                 </div>
               </div>
             </FadeUp>

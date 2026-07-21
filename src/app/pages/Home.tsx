@@ -83,11 +83,11 @@ export default function Home() {
       <section className="relative z-10 py-32 max-w-[1440px] mx-auto px-6 xl:px-16">
         <div className="grid lg:grid-cols-2 gap-20 items-center">
           <FadeUp>
-            <div className="relative">
-              <img src={IMGS.about} alt="Kezia Rooftop luxury interior" className="w-full h-[560px] object-cover bg-[#181818]" />
-              <div className="absolute -bottom-5 -right-5 px-7 py-5 hidden md:block" style={{ backgroundColor: gold }}>
+            <div className="relative aspect-[4/5] max-h-[560px] w-full overflow-hidden rounded-sm border border-white/10 shadow-2xl bg-[#181818]">
+              <img src={IMGS.about} alt="Kezia Ambient Bliss Entrance" className="w-full h-full object-cover object-center" />
+              <div className="absolute bottom-5 right-5 px-7 py-5 hidden md:block backdrop-blur-md shadow-2xl border border-black/20" style={{ backgroundColor: gold }}>
                 <p className="font-['Playfair_Display',serif] text-black text-[2rem] font-bold leading-none">12+</p>
-                <p className="text-black/62 text-[8px] tracking-[0.28em] uppercase mt-1">Years of Craft</p>
+                <p className="text-black/75 text-[8px] tracking-[0.28em] uppercase font-semibold mt-1">Years of Craft</p>
               </div>
             </div>
           </FadeUp>
@@ -132,76 +132,83 @@ export default function Home() {
             ))}
           </div>
           <div className="text-center mt-12">
-            <Link to="/workspace"
+            <Link to="/gallery"
               className="inline-flex px-9 py-4 border text-[9.5px] tracking-[0.28em] uppercase transition-all duration-300"
               style={{ borderColor: `${gold}30`, color: gold }}
               onMouseEnter={e => { e.currentTarget.style.backgroundColor = gold; e.currentTarget.style.color = "#000"; }}
               onMouseLeave={e => { e.currentTarget.style.backgroundColor = "transparent"; e.currentTarget.style.color = gold; }}>
-              Discover Workspace
+              Explore Full Gallery
             </Link>
           </div>
         </div>
       </section>
 
-      {/* ── MENU TEASER ───────────────────────────── */}
-      <section className="relative z-10 py-32 max-w-[1440px] mx-auto px-6 xl:px-16">
-        <div className="grid lg:grid-cols-3 gap-8 items-start">
-          <FadeUp className="lg:col-span-1">
-            <p className="text-[9.5px] tracking-[0.52em] uppercase mb-4" style={{ color: gold }}>Food & Drinks</p>
-            <h2 className="font-['Playfair_Display',serif] text-4xl md:text-[2.8rem] font-bold leading-[1.05] mb-6">
-              What We're<br />Pouring
-            </h2>
-            <p className="text-white/50 text-[14.5px] leading-[1.8] mb-8">
-              From stiff cocktails to bar bites that hit the spot, our menu is built for sharing, pairing, and keeping the night going.
+      {/* ── OFFICIAL KEZIA SPOTLIGHT GALLERY ───────────── */}
+      <section className="relative z-10 py-32 bg-[#141414]">
+        <div className="max-w-[1440px] mx-auto px-6 xl:px-16">
+          <FadeUp className="text-center mb-16 max-w-[700px] mx-auto">
+            <p className="text-[9.5px] tracking-[0.55em] uppercase mb-4" style={{ color: gold }}>Official Gallery</p>
+            <h2 className="font-['Playfair_Display',serif] text-4xl md:text-5xl font-bold mb-4 text-white">Experience Kezia</h2>
+            <p className="text-white/45 text-[14.5px] leading-relaxed">
+              Step inside our rooftop venue in Kalyan. From ambient glowing foyers to artisan cocktail pairings and handcrafted sushi rolls.
             </p>
-            <Link to="/menu"
-              className="inline-flex px-8 py-4 text-black text-[9.5px] tracking-[0.28em] uppercase font-semibold transition-colors"
-              style={{ backgroundColor: gold }}
-              onMouseEnter={e => (e.currentTarget.style.backgroundColor = goldHover)}
-              onMouseLeave={e => (e.currentTarget.style.backgroundColor = gold)}>
-              View Full Menu
-            </Link>
           </FadeUp>
-          <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-3 gap-5">
+
+          {/* 5-Card Uncropped Portrait Showcase */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 items-start">
             {[
-              { img: IMGS.food1, name: "A5 Wagyu Tenderloin", tag: "Chef Special", price: "₹4,500" },
-              { img: IMGS.food2, name: "Seared Scallops", tag: "Starter", price: "₹980" },
-              { img: IMGS.cocktail1, name: "Gold Rush", tag: "Cocktail", price: "₹850" },
+              {
+                img: IMGS.rooftopGlow,
+                title: "Nights Glow at Kezia",
+                subtitle: "Rooftop Night Ambiance",
+                desc: "Open-air rooftop seating with warm glowing lotus light sculptures & plush armchairs."
+              },
+              {
+                img: IMGS.ambientEntrance,
+                title: "Ambient Bliss",
+                subtitle: "Entrance Foyer",
+                desc: "Brick archway entrance featuring illuminated KEZIA sun emblem & textured walls."
+              },
+              {
+                img: IMGS.cocktailWings,
+                title: "Hibiscus Spritz & Wings",
+                subtitle: "Signature Pairing",
+                desc: "Rooftop hibiscus red cocktail served alongside chef-spiced glazed wings & microgreens."
+              },
+              {
+                img: IMGS.sushiGourmet,
+                title: "Artisan Gourmet Sushi",
+                subtitle: "Chef's Special",
+                desc: "Hand-rolled sushi with spicy mayo drizzle, edible orchid bloom & soy reduction."
+              },
+              {
+                img: IMGS.skewersJuice,
+                title: "Satay & Citrus Cooler",
+                subtitle: "Bar Bites & Juice",
+                desc: "Flame-grilled chicken satay on banana leaf with sauce art & fresh orange juice."
+              },
             ].map((item, i) => (
-              <FadeUp key={item.name} delay={0.1 + i * 0.1}>
-                <div className="group bg-[#181818] border border-white/5 hover:border-[#D4AF37]/16 transition-all duration-300 overflow-hidden">
-                  <div className="relative h-52 overflow-hidden bg-[#0D0D0D]">
-                    <img src={item.img} alt={item.name} className="w-full h-full object-cover opacity-80 group-hover:scale-106 group-hover:opacity-100 transition-all duration-600" />
-                    <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#181818] to-transparent" />
-                    <div className="absolute top-4 left-4 px-3 py-1 text-[8px] tracking-[0.28em] uppercase border border-[#D4AF37]/30 backdrop-blur-sm" style={{ color: gold, backgroundColor: "rgba(0,0,0,0.5)" }}>
-                      {item.tag}
+              <FadeUp key={item.title} delay={i * 0.08} className="h-full">
+                <Link to="/gallery">
+                  <div className="group relative aspect-[4/5] w-full overflow-hidden bg-black border border-white/10 hover:border-[#D4AF37]/50 transition-all duration-500 rounded-md shadow-2xl">
+                    {/* Uncropped Photo */}
+                    <img
+                      src={item.img}
+                      alt={item.title}
+                      className="w-full h-full object-contain group-hover:scale-104 transition-transform duration-700"
+                    />
+
+                    {/* Hover Overlay with Photo Information */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/70 to-black/30 opacity-0 group-hover:opacity-100 transition-all duration-400 p-5 flex flex-col justify-end text-left">
+                      <div className="transform translate-y-3 group-hover:translate-y-0 transition-transform duration-400">
+                        <p className="text-[8px] tracking-[0.3em] uppercase mb-1 font-semibold" style={{ color: gold }}>{item.subtitle}</p>
+                        <h3 className="font-['Playfair_Display',serif] text-base font-bold text-white mb-1.5 leading-snug">{item.title}</h3>
+                        <p className="text-white/75 text-[11.5px] leading-relaxed line-clamp-3 mb-2">{item.desc}</p>
+                        <span className="text-[8.5px] tracking-[0.25em] uppercase font-semibold text-[#D4AF37]">View in Gallery →</span>
+                      </div>
                     </div>
                   </div>
-                  <div className="p-5 flex items-center justify-between">
-                    <p className="font-['Playfair_Display',serif] text-[0.95rem] font-semibold">{item.name}</p>
-                    <span className="text-sm ml-3 flex-shrink-0" style={{ color: gold }}>{item.price}</span>
-                  </div>
-                </div>
-              </FadeUp>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── GALLERY SECTION ──────────────────────────── */}
-      <section className="relative z-10 py-32 bg-[#181818]/22 backdrop-blur-sm">
-        <div className="max-w-[1440px] mx-auto px-6 xl:px-16">
-          <FadeUp className="text-center mb-16">
-            <p className="text-[9.5px] tracking-[0.52em] uppercase mb-4" style={{ color: gold }}>The Spaces</p>
-            <h2 className="font-['Playfair_Display',serif] text-4xl md:text-5xl font-bold">Look Around</h2>
-          </FadeUp>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {[IMGS.hero, IMGS.about, IMGS.food1, IMGS.cocktail1].map((img, i) => (
-              <FadeUp key={i} delay={i * 0.1}>
-                <div className="relative h-64 overflow-hidden group border border-white/5">
-                  <img src={img} alt="Gallery image" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-70 group-hover:opacity-100" />
-                  <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500" />
-                </div>
+                </Link>
               </FadeUp>
             ))}
           </div>
