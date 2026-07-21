@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: kezia_rooftop_web
+    ports:
+      - "5173:5173"
+    volumes:
+      # Mount workspace directory for live hot-reloading across any OS device
+      - .:/app
+      # Preserve container node_modules directory
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true
+      - VITE_HOST=0.0.0.0
+    restart: unless-stopped
