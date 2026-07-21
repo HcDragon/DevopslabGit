@@ -66,7 +66,7 @@ export default function Menu() {
 
   return (
     <>
-      <PageHero tag="Culinary Journey" title="Signature Menu" subtitle="Every dish is a composed dialogue between globally sourced ingredients and the culinary traditions of India." image={IMGS.food1} imageAlt="Fine dining plated dish" />
+      <PageHero tag="Culinary Journey" title="Signature Menu" subtitle="Every dish is a composed dialogue between globally sourced ingredients and the culinary traditions of India." image={IMGS.sushiGourmet} imageAlt="Fine dining plated dish" />
 
       {/* ── CATEGORY TABS ─────────────────────────── */}
       <div className="sticky top-[68px] z-40 bg-[#0D0D0D]/94 backdrop-blur-xl border-b border-white/5">
@@ -154,9 +154,9 @@ export default function Menu() {
             </FadeUp>
             <FadeUp delay={0.2}>
               <div className="grid grid-cols-2 gap-4">
-                <img src={IMGS.cocktail1} alt="Kezia signature cocktail" className="w-full h-72 object-cover bg-[#181818] col-span-2" />
-                <img src={IMGS.cocktail2} alt="Craft cocktails" className="w-full h-44 object-cover bg-[#181818]" />
-                <img src={IMGS.bar} alt="The bar counter" className="w-full h-44 object-cover bg-[#181818]" />
+                <img src={IMGS.cocktailWings} alt="Kezia signature cocktail" className="w-full h-72 object-cover bg-[#181818] col-span-2 rounded-sm border border-white/10" />
+                <img src={IMGS.skewersJuice} alt="Craft cocktails" className="w-full h-44 object-cover bg-[#181818] rounded-sm border border-white/10" />
+                <img src={IMGS.sushiGourmet} alt="Gourmet sushi" className="w-full h-44 object-cover bg-[#181818] rounded-sm border border-white/10" />
               </div>
             </FadeUp>
           </div>
