@@ -38,7 +38,7 @@ export default function Contact() {
             <FadeUp delay={0.1} className="space-y-4 mb-12">
               {[
                 [Phone,   "Phone",   "+91 98765 43210"],
-                [Mail,    "Email",   "reservations@keziarooftop.in"],
+                [Mail,    "Email",   "hello@keziarooftop.in"],
                 [MapPin,  "Address", "Kezia Tower, 7th Floor, Kalyan West, Maharashtra 421301"],
                 [Clock,   "Dining Hours",              "Monday – Sunday · 7:00 PM – 1:00 AM"],
                 [Clock,   "Office Hours",              "Monday – Saturday · 2:00 PM – 10:00 PM"],

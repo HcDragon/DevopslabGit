@@ -183,7 +183,7 @@ export default function Gallery() {
                   to="/contact"
                   className="px-6 py-3 border border-white/20 text-white text-[9px] tracking-[0.28em] uppercase hover:border-[#D4AF37] hover:text-[#D4AF37] transition-colors"
                 >
-                  Reserve Table
+                  Get In Touch
                 </Link>
               </div>
             </div>
