@@ -136,52 +136,61 @@ export default function Gallery() {
 
       {/* ── LIGHTBOX MODAL ────────────────────────── */}
       {selectedPhoto && (
-        <div className="fixed inset-0 z-50 bg-black/92 backdrop-blur-md flex items-center justify-center p-4 sm:p-8">
-          <div className="relative max-w-[900px] w-full bg-[#141414] border border-white/10 rounded-lg overflow-hidden shadow-2xl grid md:grid-cols-2">
-            {/* Close button */}
+        <div
+          className="fixed inset-0 z-50 bg-black/92 backdrop-blur-md flex items-center justify-center p-3 sm:p-6 overflow-y-auto"
+          onClick={() => setSelectedPhoto(null)}
+        >
+          <div
+            className="relative max-w-[900px] w-full max-h-[90vh] bg-[#141414] border border-white/15 rounded-lg overflow-y-auto shadow-2xl grid md:grid-cols-2"
+            onClick={e => e.stopPropagation()}
+          >
+            {/* Prominent, touch-friendly Close button */}
             <button
               onClick={() => setSelectedPhoto(null)}
-              className="absolute top-4 right-4 z-20 w-10 h-10 bg-black/70 border border-white/20 text-white rounded-full flex items-center justify-center hover:bg-[#D4AF37] hover:text-black transition-colors"
+              aria-label="Close preview"
+              className="absolute top-3 right-3 sm:top-4 sm:right-4 z-30 w-11 h-11 bg-black/85 border border-white/30 text-white rounded-full flex items-center justify-center hover:bg-[#D4AF37] hover:text-black transition-all shadow-xl active:scale-95"
             >
-              <X size={20} />
+              <X size={22} />
             </button>
 
-            {/* Photo viewport */}
-            <div className="bg-black flex items-center justify-center p-4 min-h-[400px]">
+            {/* Photo viewport - compact max height on mobile to prevent overflow */}
+            <div className="bg-black flex items-center justify-center p-3 sm:p-6 min-h-[220px] max-h-[38vh] md:max-h-[75vh]">
               <img
                 src={selectedPhoto.img}
                 alt={selectedPhoto.title}
-                className="max-h-[80vh] w-full object-contain"
+                className="max-h-full max-w-full object-contain"
               />
             </div>
 
             {/* Photo metadata */}
-            <div className="p-8 flex flex-col justify-between bg-[#141414]">
+            <div className="p-5 sm:p-8 flex flex-col justify-between bg-[#141414]">
               <div>
-                <span className="px-3 py-1 text-[8px] tracking-[0.28em] uppercase border border-[#D4AF37]/40 rounded-xs mb-4 inline-block" style={{ color: gold }}>
+                <span className="px-3 py-1 text-[8px] tracking-[0.28em] uppercase border border-[#D4AF37]/40 rounded-xs mb-3 inline-block font-semibold" style={{ color: gold }}>
                   {selectedPhoto.category}
                 </span>
-                <h2 className="font-['Playfair_Display',serif] text-2xl font-bold text-white mb-3">
+                <h2 className="font-['Playfair_Display',serif] text-xl sm:text-2xl font-bold text-white mb-2 leading-tight">
                   {selectedPhoto.title}
                 </h2>
-                <p className="text-white/40 text-[9px] tracking-[0.3em] uppercase mb-4">
+                <p className="text-white/40 text-[9px] tracking-[0.3em] uppercase mb-3">
                   {selectedPhoto.subtitle}
                 </p>
-                <p className="text-white/60 text-[14px] leading-relaxed mb-6">
+                <p className="text-white/65 text-[13px] sm:text-[14px] leading-relaxed mb-6">
                   {selectedPhoto.desc}
                 </p>
               </div>
 
-              <div className="pt-6 border-t border-white/10 flex flex-wrap gap-4">
+              <div className="pt-4 sm:pt-6 border-t border-white/10 flex flex-wrap gap-3">
                 <Link
                   to="/menu"
-                  className="px-6 py-3 bg-[#D4AF37] text-black text-[9px] tracking-[0.28em] uppercase font-semibold hover:bg-[#c9a42f] transition-colors"
+                  onClick={() => setSelectedPhoto(null)}
+                  className="px-5 py-3 bg-[#D4AF37] text-black text-[9px] tracking-[0.28em] uppercase font-semibold hover:bg-[#c9a42f] transition-colors rounded-xs"
                 >
                   View Full Menu
                 </Link>
                 <Link
                   to="/contact"
-                  className="px-6 py-3 border border-white/20 text-white text-[9px] tracking-[0.28em] uppercase hover:border-[#D4AF37] hover:text-[#D4AF37] transition-colors"
+                  onClick={() => setSelectedPhoto(null)}
+                  className="px-5 py-3 border border-white/20 text-white text-[9px] tracking-[0.28em] uppercase hover:border-[#D4AF37] hover:text-[#D4AF37] transition-colors rounded-xs"
                 >
                   Get In Touch
                 </Link>
