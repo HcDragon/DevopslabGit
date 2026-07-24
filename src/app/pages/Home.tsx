@@ -4,7 +4,7 @@ import { ChevronDown, Star, Eye, Utensils, Music, Users, Sparkles, Wine, Heart, 
 import FadeUp from "../components/FadeUp";
 import { IMGS, gold, goldHover, surface, glass, glassBorder } from "../design";
 
-const STATS = [["12+","Years of Excellence"],["50,000+","Happy Guests"],["200+","Menu Items"],["4.9★","Google Rating"]];
+const STATS = [["Est. 2025","Premium Experience"],["50,000+","Happy Guests"],["200+","Menu Items"],["4.9★","Google Rating"]];
 const FEATURES = [
   [Eye,"Skyline View","360° panoramic views of the city at its most luminous"],
   [Utensils,"Fine Dining","Michelin-inspired cuisine with globally sourced ingredients"],
@@ -36,7 +36,7 @@ export default function Home() {
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.1, delay: 0.2, ease: [0.25,0.46,0.45,0.94] }}>
               <p className="text-[9.5px] tracking-[0.58em] uppercase mb-7" style={{ color: gold }}>Kalyan's Premium Hangout</p>
               <h1 className="font-['Playfair_Display',serif] text-[clamp(3rem,8.5vw,7rem)] font-bold leading-[0.88] mb-8 text-white">
-                Good Times,<br />High Up.<br /><span style={{ color: gold }}>Since 2012</span>
+                Good Times,<br />High Up.<br /><span style={{ color: gold }}>Since 2025</span>
               </h1>
               <p className="text-white/60 text-[16px] tracking-wide leading-[1.75] max-w-[420px] mb-10">
                 Kalyan's favorite spot for a cold drink, great music, and food you'll actually text your friends about.
@@ -86,8 +86,8 @@ export default function Home() {
             <div className="relative aspect-[4/5] max-h-[560px] w-full overflow-hidden rounded-sm border border-white/10 shadow-2xl bg-[#181818]">
               <img src={IMGS.about} alt="Kezia Ambient Bliss Entrance" className="w-full h-full object-cover object-center" />
               <div className="absolute bottom-5 right-5 px-7 py-5 hidden md:block backdrop-blur-md shadow-2xl border border-black/20" style={{ backgroundColor: gold }}>
-                <p className="font-['Playfair_Display',serif] text-black text-[2rem] font-bold leading-none">12+</p>
-                <p className="text-black/75 text-[8px] tracking-[0.28em] uppercase font-semibold mt-1">Years of Craft</p>
+                <p className="font-['Playfair_Display',serif] text-black text-[1.8rem] font-bold leading-none">Est. 2025</p>
+                <p className="text-black/75 text-[8px] tracking-[0.28em] uppercase font-semibold mt-1">Kalyan, Maharashtra</p>
               </div>
             </div>
           </FadeUp>

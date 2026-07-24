@@ -4,7 +4,7 @@ import FadeUp from "../components/FadeUp";
 import { IMGS, gold, goldHover } from "../design";
 
 const TIMELINE = [
-  { year: "2012", title: "The Vision", desc: "Founder Meera Krishnan envisioned a rooftop fine dining destination that would redefine hospitality in Kalyan, Maharashtra." },
+  { year: "2025", title: "Grand Launch", desc: "Founder Meera Krishnan launched Kezia, setting a new benchmark for rooftop dining and hospitality in Kalyan, Maharashtra." },
   { year: "2014", title: "First Star", desc: "Within two years, Kezia earned recognition as Maharashtra's most exceptional rooftop dining experience and won the Times Food Award." },
   { year: "2017", title: "Chef Aarav", desc: "Executive Chef Aarav Krishnan joined from London's acclaimed Sketch restaurant, elevating the menu to international standards." },
   { year: "2020", title: "Reimagined", desc: "A complete interior redesign by OBMI Architecture introduced the cinematic black-and-gold aesthetic the venue is celebrated for today." },
@@ -28,7 +28,7 @@ const VALUES = [
 export default function About() {
   return (
     <>
-      <PageHero tag="Our Story" title={"More Than\nA Restaurant"} subtitle="A sanctuary of gastronomy and elevation, twelve years in the making." image={IMGS.about} imageAlt="Kezia Rooftop luxury interior" height="h-[58vh] min-h-[420px]" />
+      <PageHero tag="Our Story" title={"More Than\nA Restaurant"} subtitle="A sanctuary of gastronomy and elevation in Kalyan, Maharashtra." image={IMGS.about} imageAlt="Kezia Rooftop luxury interior" height="h-[58vh] min-h-[420px]" />
 
       {/* ── STORY ─────────────────────────────────── */}
       <section className="py-32 max-w-[1440px] mx-auto px-6 xl:px-16">
@@ -89,7 +89,7 @@ export default function About() {
       <section className="py-32 max-w-[1440px] mx-auto px-6 xl:px-16">
         <FadeUp className="text-center mb-20">
           <p className="text-[9.5px] tracking-[0.52em] uppercase mb-4" style={{ color: gold }}>Our Journey</p>
-          <h2 className="font-['Playfair_Display',serif] text-4xl md:text-5xl font-bold">Twelve Years of Craft</h2>
+          <h2 className="font-['Playfair_Display',serif] text-4xl md:text-5xl font-bold">The Kezia Story</h2>
         </FadeUp>
         <div className="relative">
           <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-white/8" />
