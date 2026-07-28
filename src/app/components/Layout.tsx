@@ -42,7 +42,7 @@ export default function Layout() {
         <div className="max-w-[1440px] mx-auto px-6 xl:px-16 flex items-center justify-between h-[68px]">
           {/* Logo */}
           <Link to="/" className="flex flex-col leading-none">
-            <img src="/kezia-logo.png" alt="Kezia Logo" className="h-[68px] w-auto object-contain scale-[2.5] origin-left" />
+            <img src="/kezia-logo.png" alt="Kezia Logo" className="h-[56px] w-auto object-contain scale-[1.5] origin-left" />
           </Link>
 
           {/* Desktop nav */}
@@ -96,7 +96,7 @@ export default function Layout() {
         <div className="max-w-[1440px] mx-auto px-6 xl:px-16">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
             <div className="lg:col-span-2">
-              <img src="/kezia-logo.png" alt="Kezia Logo" className="h-[140px] w-auto object-contain scale-[1.2] origin-left mb-2" />
+              <img src="/kezia-logo.png" alt="Kezia Logo" className="h-[90px] w-auto object-contain mb-4" />
               <p className="text-white/38 text-[13px] leading-[1.8] mb-6 max-w-[340px]">
                 Good food, better drinks, best people. The only place you need to be when the sun goes down.
               </p>
