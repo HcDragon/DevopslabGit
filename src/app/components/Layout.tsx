@@ -32,8 +32,8 @@ export default function Layout() {
   }, [pathname]);
 
   const navBg = isHome
-    ? scrolled ? "bg-[#0D0D0D]/92 backdrop-blur-2xl border-b border-white/5" : "bg-transparent"
-    : "bg-[#0D0D0D]/96 backdrop-blur-2xl border-b border-white/5";
+    ? scrolled ? "bg-[#0D0D0D] border-b border-white/5" : "bg-transparent"
+    : "bg-[#0D0D0D] border-b border-white/5";
 
   return (
     <div className="min-h-screen bg-[#0D0D0D] text-[#F8F8F8] font-['Inter',sans-serif]">
@@ -42,7 +42,7 @@ export default function Layout() {
         <div className="max-w-[1440px] mx-auto px-6 xl:px-16 flex items-center justify-between h-[68px]">
           {/* Logo */}
           <Link to="/" className="flex flex-col leading-none">
-            <img src="/kezia-logo.png" alt="Kezia Logo" className="h-[60px] md:h-[80px] lg:h-[100px] w-auto object-contain mix-blend-screen drop-shadow-xl" />
+            <img src="/kezia-logo.png" alt="Kezia Logo" className="h-[60px] md:h-[80px] lg:h-[100px] w-auto object-contain drop-shadow-xl" />
           </Link>
 
           {/* Desktop nav */}
@@ -70,7 +70,7 @@ export default function Layout() {
 
         {/* Mobile nav */}
         {open && (
-          <div className="lg:hidden bg-[#0D0D0D]/97 backdrop-blur-2xl border-t border-white/5 px-6 py-8 flex flex-col gap-5">
+          <div className="lg:hidden bg-[#0D0D0D] border-t border-white/5 px-6 py-8 flex flex-col gap-5">
             {NAV.map(({ to, label }) => (
               <NavLink key={to} to={to} end={to === "/"}
                 className={({ isActive }) =>
@@ -92,11 +92,11 @@ export default function Layout() {
       </main>
 
       {/* ── FOOTER ──────────────────────────── */}
-      <footer className="bg-[#181818] border-t border-white/5 pt-20 pb-10">
+      <footer className="bg-[#0D0D0D] border-t border-white/5 pt-20 pb-10">
         <div className="max-w-[1440px] mx-auto px-6 xl:px-16">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
             <div className="lg:col-span-2">
-              <img src="/kezia-logo.png" alt="Kezia Logo" className="h-[80px] md:h-[100px] lg:h-[120px] w-auto object-contain mix-blend-screen mb-4 drop-shadow-xl" />
+              <img src="/kezia-logo.png" alt="Kezia Logo" className="h-[80px] md:h-[100px] lg:h-[120px] w-auto object-contain mb-4 drop-shadow-xl" />
               <p className="text-white/38 text-[13px] leading-[1.8] mb-6 max-w-[340px]">
                 Good food, better drinks, best people. The only place you need to be when the sun goes down.
               </p>
