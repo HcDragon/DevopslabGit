@@ -42,8 +42,7 @@ export default function Layout() {
         <div className="max-w-[1440px] mx-auto px-6 xl:px-16 flex items-center justify-between h-[68px]">
           {/* Logo */}
           <Link to="/" className="flex flex-col leading-none">
-            <span className="font-['Playfair_Display',serif] text-[21px] font-bold tracking-[0.22em]" style={{ color: gold }}>KEZIA</span>
-            <span className="text-[7.5px] tracking-[0.55em] uppercase text-white/42">Rooftop Fine Dine</span>
+            <img src="/kezia-logo.png" alt="Kezia Logo" className="h-[48px] w-auto object-contain" />
           </Link>
 
           {/* Desktop nav */}
@@ -97,8 +96,7 @@ export default function Layout() {
         <div className="max-w-[1440px] mx-auto px-6 xl:px-16">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
             <div className="lg:col-span-2">
-              <p className="font-['Playfair_Display',serif] text-[1.9rem] font-bold mb-1" style={{ color: gold }}>KEZIA</p>
-              <p className="text-[7.5px] tracking-[0.55em] uppercase text-white/28 mb-6">Kalyan's Premium Rooftop</p>
+              <img src="/kezia-logo.png" alt="Kezia Logo" className="h-[52px] w-auto object-contain mb-6" />
               <p className="text-white/38 text-[13px] leading-[1.8] mb-6 max-w-[340px]">
                 Good food, better drinks, best people. The only place you need to be when the sun goes down.
               </p>
